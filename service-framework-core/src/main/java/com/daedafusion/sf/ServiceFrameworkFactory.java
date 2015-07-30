@@ -13,7 +13,7 @@ public abstract class ServiceFrameworkFactory
 
     static
     {
-        String frameworkFactoryClass = System.getProperty("serviceFrameworkFactoryImpl", "com.df.argos.commons.sf.ServiceFrameworkFactoryYaml");
+        String frameworkFactoryClass = System.getProperty("serviceFrameworkFactoryImpl", "com.daedafusion.sf.ServiceFrameworkFactoryYaml");
 
         try
         {

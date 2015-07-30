@@ -13,6 +13,7 @@
 
     <modules>
         <module>service-framework-core</module>
+        <module>service-framework-yaml</module>
     </modules>
 
     <licenses>
@@ -51,6 +52,12 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
+                <groupId>com.daedafusion</groupId>
+                <artifactId>service-framework-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
                 <groupId>commons-codec</groupId>
                 <artifactId>commons-codec</artifactId>
                 <version>[1.10,)</version>
@@ -59,6 +66,11 @@
                 <groupId>net.lingala.zip4j</groupId>
                 <artifactId>zip4j</artifactId>
                 <version>1.3.2</version>
+            </dependency>
+            <dependency>
+                <groupId>org.yaml</groupId>
+                <artifactId>snakeyaml</artifactId>
+                <version>1.15</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
