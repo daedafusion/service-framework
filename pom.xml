@@ -9,7 +9,7 @@
 
     <name>DaedaFusion Service Framework Parent</name>
     <url>http://daedafusion.com</url>
-    <description></description>
+    <description>A Service/Provider framework with plugin classloading isolation</description>
 
     <modules>
         <module>service-framework-core</module>
@@ -161,7 +161,6 @@
                 </configuration>
             </plugin>
 
-
         </plugins>
 
         <pluginManagement>
@@ -259,7 +258,7 @@
 
     <profiles>
         <profile>
-            <id>sonatype-oss-release</id>
+            <id>sign</id>
             <build>
                 <plugins>
                     <plugin>
@@ -278,7 +277,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
-                        <version>1.1</version>
+                        <version>1.6</version>
                         <executions>
                             <execution>
                                 <id>sign-artifacts</id>
