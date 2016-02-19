@@ -14,6 +14,7 @@
     <modules>
         <module>service-framework-core</module>
         <module>service-framework-yaml</module>
+        <module>service-framework-test</module>
     </modules>
 
     <licenses>
