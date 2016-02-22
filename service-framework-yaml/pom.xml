@@ -18,6 +18,10 @@
             <artifactId>service-framework-core</artifactId>
         </dependency>
         <dependency>
+            <groupId>com.daedafusion</groupId>
+            <artifactId>configuration-core</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.yaml</groupId>
             <artifactId>snakeyaml</artifactId>
         </dependency>

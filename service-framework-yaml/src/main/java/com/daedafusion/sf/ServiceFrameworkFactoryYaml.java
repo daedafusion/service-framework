@@ -1,5 +1,6 @@
 package com.daedafusion.sf;
 
+import com.daedafusion.configuration.Configuration;
 import com.daedafusion.sf.ServiceFramework;
 import com.daedafusion.sf.ServiceFrameworkFactory;
 import com.daedafusion.sf.config.ServiceConfiguration;
@@ -36,8 +37,19 @@ public class ServiceFrameworkFactoryYaml extends ServiceFrameworkFactory
     {
         if(!frameworks.containsKey(name))
         {
-            // Attempt default config
-            setConfigResource(ServiceFrameworkFactoryYaml.class.getClassLoader().getResourceAsStream(defaultFrameworkResource));
+            try
+            {
+                // Attempt default config
+                InputStream in = Configuration.getInstance().getResource(name);
+
+                setConfigResource(name, in);
+            }
+            catch(Exception e)
+            {
+                // Fall back to src default
+                setConfigResource(name, ServiceFrameworkFactoryYaml.class.getClassLoader().getResourceAsStream(defaultFrameworkResource));
+
+            }
         }
 
         return frameworks.get(name);
@@ -55,12 +67,7 @@ public class ServiceFrameworkFactoryYaml extends ServiceFrameworkFactory
         frameworks.clear();
     }
 
-    public void setConfigResource(InputStream resource)
-    {
-        setConfigResource(defaultFramework, resource);
-    }
-
-    public void setConfigResource(String name, InputStream resource)
+    protected void setConfigResource(String name, InputStream resource)
     {
         Yaml yaml = new Yaml(new Constructor(ServiceConfiguration.class));
 
