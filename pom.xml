@@ -57,6 +57,11 @@
                 <artifactId>service-framework-core</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.daedafusion</groupId>
+                <artifactId>configuration-core</artifactId>
+                <version>1.1-SNAPSHOT</version>
+            </dependency>
 
             <dependency>
                 <groupId>commons-codec</groupId>
