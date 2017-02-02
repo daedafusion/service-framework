@@ -18,29 +18,11 @@ public class BackgroundServiceImpl extends AbstractService<BackgroundServiceProv
         addLifecycleListener(new LifecycleListener()
         {
             @Override
-            public void init()
-            {
-
-            }
-
-            @Override
             public void start()
             {
                 getProviders().forEach(p -> {
                     log.info(String.format("Starting background service %s", p.getName()));
                 });
-            }
-
-            @Override
-            public void stop()
-            {
-
-            }
-
-            @Override
-            public void teardown()
-            {
-
             }
         });
     }

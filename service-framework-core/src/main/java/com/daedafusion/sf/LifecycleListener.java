@@ -5,8 +5,9 @@ package com.daedafusion.sf;
  */
 public interface LifecycleListener
 {
-    void init();
-    void start();
-    void stop();
-    void teardown();
+    default void init(){}
+    default void start(){}
+    default void postStart(){}
+    default void stop(){}
+    default void teardown(){}
 }
