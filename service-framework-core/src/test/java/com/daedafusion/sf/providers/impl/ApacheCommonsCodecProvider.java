@@ -35,6 +35,12 @@ public class ApacheCommonsCodecProvider extends AbstractProvider implements Base
             }
 
             @Override
+            public void postStart()
+            {
+                log.info("provider postStart");
+            }
+
+            @Override
             public void stop()
             {
                 log.info("provider stop");

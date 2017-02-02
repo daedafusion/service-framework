@@ -165,28 +165,25 @@ public abstract class AbstractManagedObject implements ManagedObject
     @Override
     public void start()
     {
-        for(LifecycleListener listener : listeners)
-        {
-            listener.start();
-        }
+        listeners.forEach(LifecycleListener::start);
+    }
+
+    @Override
+    public void postStart()
+    {
+        listeners.forEach(LifecycleListener::postStart);
     }
 
     @Override
     public void stop()
     {
-        for(LifecycleListener listener : listeners)
-        {
-            listener.stop();
-        }
+        listeners.forEach(LifecycleListener::stop);
     }
 
     @Override
     public void teardown()
     {
-        for(LifecycleListener listener : listeners)
-        {
-            listener.teardown();
-        }
+        listeners.forEach(LifecycleListener::teardown);
     }
 
     public List<LifecycleListener> getListeners()

@@ -27,20 +27,16 @@ public final class ServiceFramework
             throw new ServiceFrameworkException("Framework did not initialize");
         }
 
-        for(ManagedObject mo : serviceRegistry.getManagedObjects())
-        {
-            mo.start();
-        }
+        serviceRegistry.getManagedObjects().forEach(LifecycleListener::start);
 
         isStarted = true;
+
+        serviceRegistry.getManagedObjects().forEach(LifecycleListener::postStart);
     }
 
     public void stop()
     {
-        for(ManagedObject mo : serviceRegistry.getManagedObjects())
-        {
-            mo.stop();
-        }
+        serviceRegistry.getManagedObjects().forEach(LifecycleListener::stop);
 
         isStarted = false;
     }
@@ -55,10 +51,7 @@ public final class ServiceFramework
             stop();
         }
 
-        for(ManagedObject mo : serviceRegistry.getManagedObjects())
-        {
-            mo.teardown();
-        }
+        serviceRegistry.getManagedObjects().forEach(LifecycleListener::teardown);
     }
 
     public <T> T getService(Class<T> inf)
