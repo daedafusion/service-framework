@@ -11,13 +11,13 @@ Service/Provider framework with plugin isolation
 <dependency>
     <groupId>com.daedafusion</groupId>
     <artifactId>service-framework</artifactId>
-    <version>1.0</version>
+    <version>1.1</version>
 </dependency>
 
 <!-- For yml based configuration files -->
 <dependency>
     <groupId>com.daedafusion</groupId>
     <artifactId>service-framework-yaml</artifactId>
-    <version>1.0</version>
+    <version>1.1</version>
 </dependency>
 ```
