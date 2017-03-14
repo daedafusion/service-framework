@@ -80,4 +80,13 @@ public class BasicTest
 
         return config;
     }
+
+    @Test
+    public void testConventionFallback()
+    {
+        ManagedObjectDescription mod = new ManagedObjectDescription();
+        mod.setInfClass("com.test.framework.MyService");
+
+        assertThat(mod.getImplClass(), is("com.test.framework.impl.MyServiceImpl"));
+    }
 }

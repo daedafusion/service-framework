@@ -48,7 +48,16 @@ public class ManagedObjectDescription
 
     public String getImplClass()
     {
-        return implClass;
+        if(implClass != null)
+        {
+            return implClass;
+        }
+        else
+        {
+            // Return default by convention
+            int lastDot = getInfClass().lastIndexOf(".");
+            return String.format("%s.impl%sImpl", getInfClass().substring(0, lastDot), getInfClass().substring(lastDot));
+        }
     }
 
     public void setImplClass(String implClass)
