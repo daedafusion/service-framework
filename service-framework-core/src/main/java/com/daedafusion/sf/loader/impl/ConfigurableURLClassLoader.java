@@ -1,7 +1,8 @@
 package com.daedafusion.sf.loader.impl;
 
 import com.daedafusion.sf.config.LoaderDescription;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.net.URL;
 import java.net.URLClassLoader;
@@ -11,7 +12,7 @@ import java.net.URLClassLoader;
  */
 public class ConfigurableURLClassLoader extends URLClassLoader
 {
-    private static final Logger log = Logger.getLogger(ConfigurableURLClassLoader.class);
+    private static final Logger log = LogManager.getLogger(ConfigurableURLClassLoader.class);
     private final LoaderDescription description;
 
     public ConfigurableURLClassLoader(URL[] urls, ClassLoader parent, LoaderDescription description)

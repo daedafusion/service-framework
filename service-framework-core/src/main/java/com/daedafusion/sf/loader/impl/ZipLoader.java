@@ -10,7 +10,8 @@ import org.apache.commons.codec.binary.Hex;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.*;
 import java.net.MalformedURLException;
@@ -29,7 +30,7 @@ import java.util.UUID;
  */
 public class ZipLoader implements Loader
 {
-    private static final Logger log = Logger.getLogger(ZipLoader.class);
+    private static final Logger log = LogManager.getLogger(ZipLoader.class);
 
     private LoaderDescription description;
     private URLClassLoader classLoader;

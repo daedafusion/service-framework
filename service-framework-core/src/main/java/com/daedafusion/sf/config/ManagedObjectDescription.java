@@ -1,6 +1,7 @@
 package com.daedafusion.sf.config;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.*;
 
@@ -9,7 +10,7 @@ import java.util.*;
  */
 public class ManagedObjectDescription
 {
-    private static final Logger log = Logger.getLogger(ManagedObjectDescription.class);
+    private static final Logger log = LogManager.getLogger(ManagedObjectDescription.class);
 
     // Not specified in configuration!  Auto generated
     private String uuid;

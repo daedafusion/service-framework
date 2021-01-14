@@ -1,13 +1,14 @@
 package com.daedafusion.sf;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Created by mphilpot on 7/2/14.
  */
 public final class ServiceFramework
 {
-    private static final Logger log = Logger.getLogger(ServiceFramework.class);
+    private static final Logger log = LogManager.getLogger(ServiceFramework.class);
 
     private ServiceRegistry serviceRegistry;
 

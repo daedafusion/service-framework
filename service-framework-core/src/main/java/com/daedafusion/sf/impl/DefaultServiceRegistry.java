@@ -6,7 +6,8 @@ import com.daedafusion.sf.config.ManagedObjectDescription;
 import com.daedafusion.sf.config.ServiceConfiguration;
 import com.daedafusion.sf.loader.Loader;
 import com.daedafusion.sf.loader.LoaderFactory;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -19,7 +20,7 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class DefaultServiceRegistry implements ServiceRegistry
 {
-    private static final Logger log = Logger.getLogger(DefaultServiceRegistry.class);
+    private static final Logger log = LogManager.getLogger(DefaultServiceRegistry.class);
 
     private ServiceConfiguration serviceConfiguration;
 

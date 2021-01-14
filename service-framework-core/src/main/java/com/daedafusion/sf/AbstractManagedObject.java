@@ -1,7 +1,8 @@
 package com.daedafusion.sf;
 
 import com.daedafusion.sf.config.ManagedObjectDescription;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.*;
 
@@ -10,7 +11,7 @@ import java.util.*;
  */
 public abstract class AbstractManagedObject implements ManagedObject
 {
-    private static final Logger log = Logger.getLogger(AbstractManagedObject.class);
+    private static final Logger log = LogManager.getLogger(AbstractManagedObject.class);
 
     private String uuid;
 

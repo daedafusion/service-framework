@@ -4,14 +4,15 @@ import com.daedafusion.sf.AbstractService;
 import com.daedafusion.sf.BackgroundService;
 import com.daedafusion.sf.LifecycleListener;
 import com.daedafusion.sf.providers.BackgroundServiceProvider;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Created by mphilpot on 9/29/16.
  */
 public class BackgroundServiceImpl extends AbstractService<BackgroundServiceProvider> implements BackgroundService
 {
-    private static final Logger log = Logger.getLogger(BackgroundServiceImpl.class);
+    private static final Logger log = LogManager.getLogger(BackgroundServiceImpl.class);
 
     public BackgroundServiceImpl()
     {
