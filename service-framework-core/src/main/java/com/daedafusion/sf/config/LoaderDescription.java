@@ -1,6 +1,7 @@
 package com.daedafusion.sf.config;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -10,7 +11,7 @@ import java.util.Map;
  */
 public class LoaderDescription
 {
-    private static final Logger log = Logger.getLogger(LoaderDescription.class);
+    private static final Logger log = LogManager.getLogger(LoaderDescription.class);
 
     private String              uri;
     private String              loaderClass;

@@ -4,14 +4,15 @@ import com.daedafusion.sf.AbstractProvider;
 import com.daedafusion.sf.LifecycleListener;
 import com.daedafusion.sf.providers.Base64EncoderProvider;
 import org.apache.commons.codec.binary.Base64;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Created by mphilpot on 7/2/14.
  */
 public class ApacheCommonsCodecProvider extends AbstractProvider implements Base64EncoderProvider
 {
-    private static final Logger log = Logger.getLogger(ApacheCommonsCodecProvider.class);
+    private static final Logger log = LogManager.getLogger(ApacheCommonsCodecProvider.class);
 
     private String someProperty;
     private String anotherProperty;

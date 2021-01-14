@@ -1,6 +1,7 @@
 package com.daedafusion.sf;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +11,7 @@ import java.util.List;
  */
 public abstract class AbstractService<T extends Provider> extends AbstractManagedObject implements Service
 {
-    private static final Logger log = Logger.getLogger(AbstractService.class);
+    private static final Logger log = LogManager.getLogger(AbstractService.class);
 
     private List<T> providers;
 

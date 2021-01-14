@@ -5,7 +5,8 @@ import com.daedafusion.sf.config.ServiceConfiguration;
 import com.daedafusion.sf.impl.DefaultServiceRegistry;
 import com.daedafusion.sf.Base64Encoder;
 import org.apache.commons.codec.binary.Base64;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.*;
@@ -17,7 +18,7 @@ import static org.junit.Assert.fail;
  */
 public class BasicTest
 {
-    private static final Logger log = Logger.getLogger(BasicTest.class);
+    private static final Logger log = LogManager.getLogger(BasicTest.class);
 
     @Test
     public void main() throws ServiceFrameworkException
